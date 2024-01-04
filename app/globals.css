@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #191b1f;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    background: #ff563c;
+    color: white;
+}
+
+.blur_it1000{
+    backdrop-filter: blur(200px);
+}
+
+.grain {
+    position: relative;
+}
+
+.grain::before {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../cardboard-texture.jpg");
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 10;
+}
